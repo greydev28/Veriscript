@@ -7,15 +7,15 @@ export default function dashboard() {
     { id: 3, image: "/pharmacist.png", title: "patient" },
   ];
   return (
-    <section className=" min-h-full flex bg-white font-plusJakarta">
-      <div className="max-w-7xl mx-[30px] flex justify-between items-center">
-        <div className=" my-[27.5px] h-fit  w-1/2 relative hidden lg:flex items-center justify-center overflow-hidden">
+    <section className=" w-full max-h-screen bg-white over-flow-hidden">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className=" mt-[27.5px] w-1/2">
           <Image
             src="/profile-images.png"
             alt="welcome"
             width={777}
-            height={521}
-            className="object-contain"
+            height={400}
+            className="object-contain h-full w-full"
             priority
           />
         </div>
