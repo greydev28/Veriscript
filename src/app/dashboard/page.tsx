@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { title } from "node:process";
 
 export default function dashboard() {
   const details = [
@@ -8,9 +7,9 @@ export default function dashboard() {
     { id: 3, image: "/pharmacist.png", title: "patient" },
   ];
   return (
-    <section className=" w-full max-h-screen bg-white over-flow-hidden">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className=" mt-[27.5px] w-1/2">
+    <section className=" min-h-full flex bg-white font-plusJakarta">
+      <div className="max-w-7xl mx-[30px] flex justify-between items-center">
+        <div className=" my-[27.5px] h-fit  w-1/2 relative hidden lg:flex items-center justify-center overflow-hidden">
           <Image
             src="/profile-images.png"
             alt="welcome"
@@ -36,7 +35,7 @@ export default function dashboard() {
             </h2>
             <p>Which of these perfectly describes you.</p>
           </div>
-          <div>
+          <div className="flex justify-between items-center">
             <div>
               <Image
                 src="/patient.png"
