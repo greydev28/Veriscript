@@ -4,7 +4,6 @@
   --foreground: #171717;
   --button-background: #03b156;
   --font-size: 20px;
-  --border-color: ;
 }
 
 @theme inline {
@@ -12,12 +11,14 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-inter: var(--font-inter);
+  --font-plusJakarta: var(--font-plus-jakarta-sans);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffff;
+    --foreground: #171717;
   }
 }
 

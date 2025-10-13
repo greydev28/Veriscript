@@ -1,9 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "./component/Navbar";
 
 // Load Google Font (example: Inter)
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter", // optional: lets you use it in Tailwind
+});
+
+// Load Google Font (example: plus jakarta sans)
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-plus-jakarta",
+});
 
 // Page metadata
 export const metadata: Metadata = {
@@ -20,9 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${plusJakarta.variable}`}>
       <body className="bg-gradient-to-l from-white to-[#e6f7ee]">
-        <Navbar />
         <main>{children}</main>
       </body>
     </html>
