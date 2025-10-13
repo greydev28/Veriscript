@@ -1,7 +1,8 @@
+import { Menu } from "lucide-react";
 import Image from "next/image";
 export default function Navbar() {
   return (
-    <nav className="bg-white  mt-[40px] mx-[72px] z-50">
+    <nav className="bg-white mt-[40px] md:mx-[72px] z-50">
       <div className="max-w-7xl mx-auto px-[29px] py-[32px] flex justify-between items-center border-2 border-[#e6f7ee] rounded-xl">
         <div className="flex-1">
           <Image
@@ -12,7 +13,9 @@ export default function Navbar() {
             className="object-contain"
           />
         </div>
-        <ul className="flex justify-between items-center w-[536px] h-[44px] gap-[10px] text-xl font-medium  font-plusJakarta">
+
+        {/* desktop nav */}
+        <ul className="flex justify-between items-center w-[536px] h-[44px] gap-[10px] text-xl font-medium  font-plusJakarta max-lg:hidden">
           <li className="cursor-pointer hover:text-[var(--button-background)] transition">
             How it works
           </li>
@@ -35,6 +38,11 @@ export default function Navbar() {
             Get Started
           </button>
         </ul>
+
+        {/* mobile nav */}
+        <div className="hidden max-lg:block">
+          <Menu />
+        </div>
       </div>
     </nav>
   );
