@@ -10,13 +10,13 @@ export default function dashboard() {
   return (
     <section className=" w-full max-h-screen bg-white over-flow-hidden">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className=" mt-[27.5px] w-1/2">
+        <div className="w-fit flex items-center h-screen max-h-screen overflow-hidden">
           <Image
             src="/profile-images.png"
             alt="welcome"
             width={777}
-            height={521}
-            className="object-contain"
+            height={400}
+            className="object-contain h-full w-full"
             priority
           />
         </div>
