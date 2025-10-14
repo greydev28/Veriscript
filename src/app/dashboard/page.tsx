@@ -5,7 +5,7 @@ export default function Dashboard() {
   const details = [
     { id: 1, image: "/patient.png", title: "patient" },
     { id: 2, image: "/pharmacist.png", title: "Doctor" },
-    { id: 3, image: "/pharmacist.png", title: "patient" },
+    { id: 3, image: "/pharmacist.png", title: "pharmacist" },
   ];
 
   const [selected, setSelected] = useState<null | number>(null);
