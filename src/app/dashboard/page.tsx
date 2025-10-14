@@ -11,8 +11,8 @@ export default function Dashboard() {
   const [selected, setSelected] = useState<null | number>(null);
   return (
     <section className=" w-full min-h-screen bg-white overflow-hidden font-plusJakarta">
-      <div className="max-w-7xl mx-[30px] flex justify-between items-center">
-        <div className="hidden md:block md:my-[27.5px] w-1/2 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-center gap-10">
+        <div className="hidden lg:block lg:my-[27.5px] w-1/2 overflow-hidden">
           <Image
             src="/profile-images.png"
             alt="welcome"
@@ -22,7 +22,7 @@ export default function Dashboard() {
             priority
           />
         </div>
-        <div className="w-[520px] min-h-[291px] flex flex-col gap-[31px]">
+        <div className="lg:w-[520px] w-full  min-h-screen sm:mt-[50px] md:my-[70px]  lg:mt-0 lg:min-h-[291px] flex flex-col gap-[31px]  lg:justify-between lg:items-start">
           <div className=" w-[128px] h-[32px]">
             <Image
               src="/logo.png"
@@ -41,14 +41,14 @@ export default function Dashboard() {
             </p>
           </div>
 
-          <div className=" flex  justify-between items-center  w-[520px] h-[175px] gap-[10px] ">
+          <div className=" grid  md:grid-cols-3 grid-cols-1  place-content-center items-center w-full h-full  lg:w-[520px] lg:h-[175px] gap-[10px] ">
             {details.map((detail) => (
               <button
                 key={detail.id}
-                className="border-2 border-[#CCCCCC] w-[168px] h-[175px] rounded-2xl px-[10px] py-[9px] relative cursor-pointer"
+                className="border-2 border-[#CCCCCC] w-full sm:h-[190px] md:h-[300px] lg:w-[168px] lg:h-[200px] rounded-2xl px-[12px] py-[12px] relative cursor-pointer transition-all duration-300 hover:shadow-md"
                 onClick={() => setSelected(detail.id)}
               >
-                <div className="w-[148px] h-[158px] flex flex-col justify-center items-center gap-2 px-4 py-4">
+                <div className="lg:w-[148px] lg:h-[158px] w-full h-full flex flex-col justify-center items-center gap-2 px-4 py-4">
                   <div className="w-[103px] h-[103px] p-2">
                     <Image
                       src={detail.image}
