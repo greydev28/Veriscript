@@ -215,7 +215,7 @@ export default function Account() {
               {gender.map((item) => (
                 <label key={item.id} className="flex items-center gap-2">
                   <input
-                    type="radio"
+                    type="checkbox"
                     onClick={() => setSelectedGender(item.id)}
                     checked={selectedGender == item.id}
                     className={`appearance-none border border-[var(--button-background)] rounded-full h-[14px] w-[14px] ${
