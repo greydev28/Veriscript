@@ -216,6 +216,7 @@ export default function Account() {
                 <label key={item.id} className="flex items-center gap-2">
                   <input
                     type="checkbox"
+                    readOnly
                     onClick={() => setSelectedGender(item.id)}
                     checked={selectedGender == item.id}
                     className={`appearance-none border border-[var(--button-background)] rounded-full h-[14px] w-[14px] ${

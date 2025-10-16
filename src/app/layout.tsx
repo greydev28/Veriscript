@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
 import "./globals.css";
 
 // Load Google Font (example: Inter)
@@ -16,6 +16,11 @@ const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
 });
 
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-dmSans",
+});
 // Page metadata
 export const metadata: Metadata = {
   title: "Veriscript",
@@ -31,7 +36,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${plusJakarta.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${plusJakarta.variable} ${dmSans.variable}`}
+    >
       <body className="bg-gradient-to-l from-white to-[#e6f7ee]">
         <main>{children}</main>
       </body>
