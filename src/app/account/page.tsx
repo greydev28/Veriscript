@@ -1,5 +1,5 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useState } from "react";
 export default function Account() {
@@ -7,6 +7,8 @@ export default function Account() {
     { id: 1, title: "Male" },
     { id: 2, title: "Female" },
   ];
+
+  const router = useRouter();
 
   const [selectedGender, setSelectedGender] = useState<number | string>("Male");
   return (
@@ -23,7 +25,10 @@ export default function Account() {
           />
         </div>
         <div className="lg:w-1/2 w-full min-h-screen flex flex-col gap-[24px] pb-2.5">
-          <button className="capitalize flex justify-center items-center h-[84px] w-[40px]  p-[10px] gap-1">
+          <button
+            className="capitalize flex justify-center items-center h-[84px] w-[40px]  p-[10px] gap-1"
+            onClick={() => router.push("/")}
+          >
             {" "}
             <Image
               src="/back-arrow.png"
