@@ -27,7 +27,7 @@ export default function Account() {
         <div className="lg:w-1/2 w-full min-h-screen flex flex-col gap-[24px] pb-2.5">
           <button
             className="capitalize flex justify-center items-center h-[84px] w-[40px]  p-[10px] gap-1"
-            onClick={() => router.push("/")}
+            onClick={() => router.push("/account")}
           >
             {" "}
             <Image
@@ -65,7 +65,7 @@ export default function Account() {
               >
                 Full Name{" "}
                 <span className="flex items-center text-[#525866] font-plusJakarta font-semibold">
-                  (Option)
+                  (Optional)
                   <Image
                     src="/info-custom-fill.svg"
                     alt="info-custom-fill"

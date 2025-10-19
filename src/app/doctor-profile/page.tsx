@@ -2,8 +2,8 @@ import Asidebar from "@/components/Asidebar";
 
 export default function DoctorProfile() {
   return (
-    <div>
+    <section className="w-full min-h-screen bg-white overflow-hidden font-plusJakarta">
       <Asidebar />
-    </div>
+    </section>
   );
 }

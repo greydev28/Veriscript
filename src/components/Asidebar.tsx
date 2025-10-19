@@ -5,6 +5,7 @@ import { PiSquaresFourFill } from "react-icons/pi";
 import { FaBriefcaseMedical } from "react-icons/fa";
 import { TbPill } from "react-icons/tb";
 import { FaWallet } from "react-icons/fa6";
+import { CgProfile } from "react-icons/cg";
 import { IoIosLogOut } from "react-icons/io";
 
 export default function Asidebar() {
@@ -33,11 +34,17 @@ export default function Asidebar() {
       image: <FaWallet className="w-[15px] h-[15px]" />,
       path: "/wallet",
     },
+    {
+      id: 5,
+      name: "Profile",
+      image: <CgProfile className="w-[15px] h-[15px]" />,
+      path: "/Profile",
+    },
   ];
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <aside className="fixed left- 0 top-0 bottom-0 hidden lg:block w-[230px]  py-[54px] px-[23px] ">
+    <aside className="fixed left- 0 bg-white top-0 bottom-0 hidden lg:block w-[230px]  py-[54px] px-[23px] ">
       <div className="w-[184px] h-full flex flex-col gap-7.5 ">
         <div className="flex-1 ">
           <div className="mb-[32px]  ">
