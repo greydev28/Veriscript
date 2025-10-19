@@ -6,7 +6,8 @@ import { useState } from "react";
 import { FaWallet } from "react-icons/fa6";
 import { FaBriefcaseMedical } from "react-icons/fa";
 export default function Description() {
-  /*  const data = [
+  const [activeTab, setActiveTab] = useState<string>("All");
+  const data = [
     {
       id: 1,
       doctor: "Dr. Benjamin Okoli",
@@ -53,15 +54,13 @@ export default function Description() {
     status === "Dispensed"
       ? "text-blue-600 bg-blue-100"
       : "text-orange-600 bg-orange-100";
- */
-  const [activeTab, setActiveTab] = useState<string>("All");
 
   const tabs = ["All", "Recents", "Active", "Pending"];
 
   return (
     <div
       className="w-[991px] h-[674px] ml-[262px] 
-      mt-31.5"
+      pt-[125px]"
     >
       <div className="w-full h-[213px] flex flex-col justify-center gap-4 ">
         <div className="font-plusJakarta w-[285px] h-[46px] flex flex-col justify-center gap-2 mb-1.5">
@@ -180,8 +179,8 @@ export default function Description() {
           ))}
         </div>
         <table className="w-[991px] h-[350px] px-2.5 pb-3.5 bg-white">
-          <thead className="text-gray-500 w-full px-3 h-16 flex justify-between items-center">
-            <tr>
+          <thead className="text-gray-500 w-full h-16 ">
+            <tr className=" px-3">
               <th className="text-right">
                 <input type="checkbox" />
               </th>
@@ -202,6 +201,42 @@ export default function Description() {
               </th>
             </tr>
           </thead>
+          <tbody className=" w-full px-3 h-16">
+            {filteredData.map((item) => (
+              <tr
+                key={item.id}
+                className=" bg-[#F8F9FB] border-t-2 border-white"
+              >
+                <td className="py-2">
+                  {" "}
+                  <input type="checkbox" />
+                </td>
+                <td className="row-span-2">{item.doctor}</td>
+                <td>{item.date}</td>
+                <td>{item.pid}</td>
+                <td>{item.fee}</td>
+                <td>
+                  <span
+                    className={`px-3 py-1 rounded-full text-xs font-medium ${statusColor(
+                      item.status
+                    )}`}
+                  >
+                    {item.status}
+                  </span>
+                </td>
+                <td>
+                  {" "}
+                  <Image
+                    src="/ThreeVertical.svg"
+                    alt="Options menu"
+                    width={20}
+                    height={20}
+                    className="cursor-pointer"
+                  />
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </div>
